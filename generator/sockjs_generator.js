@@ -40,13 +40,13 @@ module.exports = {
          // client.publish('/test', { hello: 'world' }); 
          // client.call('com.myapp.add2', [2, 3]).then(function (res) { }); 
          // client.send("hello world"); // sockjs
-         // var msg = {
-         //    "action": "PLAYER1_LOGIN",
-         //    "header": {"token": "abc"},
-         //    "body": {}
-         //  };
-         // client.send(JSON.stringify(msg));
-         // done();
+         var msg = {
+            "action": "PLAYER1_LOGIN",
+            "header": {"token": "abc"},
+            "body": {}
+          };
+         client.send(JSON.stringify(msg));
+         done();
        },
  
        /**
