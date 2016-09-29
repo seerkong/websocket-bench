@@ -7,6 +7,7 @@ Nodejs cli tool for benchmarking websocket servers. Currently supports:
 * [Faye](https://github.com/faye/faye)
 * [Primus](https://github.com/primus/primus)
 * [WAMP](https://github.com/tavendo/AutobahnJS)
+* [SockJS](https://github.com/sockjs/sockjs-node)
 
 ## Installation
 
@@ -27,9 +28,16 @@ Simple example (using Socket.IO by default):
 
 `websocket-bench -a 2500 -c 200 http://localhost:3000`
 
-Simple example (using Primus):
+Simple example using Primus:
 
 `websocket-bench -t primus ws://localhost:8080`
+
+Simple example using sockjs:
+
+`websocket-bench -t sockjs http://localhost:3006/sockjs`
+
+sockjs development:
+`node ./index.js -g generator/sockjs_generator.js -a 300 -c 200 -t sockjs -m 5  http://localhost:3006/sockjs`
 
 command help
 

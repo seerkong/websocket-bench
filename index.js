@@ -56,6 +56,8 @@ if (!program.message) {
   program.message = 0;
 }
 
+// program.type = 'sockjs';
+
 if (!program.type) {
   program.type = 'socket.io';
 }
