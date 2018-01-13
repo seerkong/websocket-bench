@@ -38,7 +38,10 @@ Simple example using sockjs:
 
 sockjs development:
 `node ./index.js -g generator/sockjs_generator.js -a 300 -c 200 -t sockjs -m 5  http://localhost:3006/sockjs`
+`node ./index.js -g generator/realtimetpl_generator.js -a 1000 -c 500 -t sockjs -m 5 ws://localhost:3000/sockjs/websocket`
+`node ./index.js -g generator/realtimetpl_generator.js -a 1000 -c 500 -t native_ws -m 5 ws://localhost:3000/sockjs/websocket`
 
+`node ./index.js -g generator/native_ws_generator.js -a 1000 -c 500 -t native_ws -m 5 ws://localhost:3000/sockjs/websocket`
 command help
 
     Usage: websocket-bench [options] <server>
